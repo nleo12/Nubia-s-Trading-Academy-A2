@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Self-Assessment Quiz — Nubia Leo Trading Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="site-top">
+      <div class="brand"><h1>Nubia Leo Trading Academy</h1></div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="indicators.html">Technical Indicators</a></li>
+          <li><a class="nav-link" href="risk-management.html">Risk Management</a></li>
+          <li><a class="nav-link" href="concepts.html">Key Concepts</a></li>
+          <li><a class="nav-link" href="references.html">References & Resources</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link active" href="quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <h2>Self-Assessment Quiz — Milestone #2</h2>
+    <p>
+      This quiz helps you check understanding of the material on technical indicators,
+      risk management, and trading fundamentals. Passing score is <strong>100%</strong>.
+    </p>
+
+    <form id="quiz-form" class="quiz-form" novalidate>
+      <fieldset>
+        <legend>Q1 (Fill-in-the-blank)</legend>
+        <label for="q1">The RSI is used to measure market <input id="q1" name="q1" type="text" placeholder="one word (e.g. momentum)" /></label>
+        <div class="explain small">Answer example: <em>momentum</em></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Q2 (Multiple Choice — one correct)</legend>
+        <p>Which moving average gives more weight to recent prices?</p>
+        <label><input type="radio" name="q2" value="A"> A) Simple Moving Average (SMA)</label><br>
+        <label><input type="radio" name="q2" value="B"> B) Exponential Moving Average (EMA)</label><br>
+        <label><input type="radio" name="q2" value="C"> C) Hull Moving Average (HMA)</label><br>
+        <label><input type="radio" name="q2" value="D"> D) Triangular Moving Average (TMA)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Q3 (Multiple Choice — one correct)</legend>
+        <p>Which candlestick is commonly considered a bearish reversal when it appears at the top of an uptrend?</p>
+        <label><input type="radio" name="q3" value="A"> A) Hammer</label><br>
+        <label><input type="radio" name="q3" value="B"> B) Shooting Star</label><br>
+        <label><input type="radio" name="q3" value="C"> C) Doji</label><br>
+        <label><input type="radio" name="q3" value="D"> D) Bullish Engulfing</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Q4 (Multiple Choice — one correct)</legend>
+        <p>A typical conservative recommendation for risk per trade (as a percentage of account) is closest to:</p>
+        <label><input type="radio" name="q4" value="A"> A) 5%</label><br>
+        <label><input type="radio" name="q4" value="B"> B) 1%</label><br>
+        <label><input type="radio" name="q4" value="C"> C) 10%</label><br>
+        <label><input type="radio" name="q4" value="D"> D) 0.01%</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Q5 (Multi-selection — choose all that apply)</legend>
+        <p>Which of the following are components of effective risk management?</p>
+        <label><input type="checkbox" name="q5" value="position"> Position sizing</label><br>
+        <label><input type="checkbox" name="q5" value="stop"> Stop-loss placement</label><br>
+        <label><input type="checkbox" name="q5" value="overtrade"> Avoid overtrading</label><br>
+        <label><input type="checkbox" name="q5" value="journal"> Trade journaling / review</label>
+        <div class="small explain">Correct choices: Position sizing, Stop-loss placement, Trade journaling.</div>
+      </fieldset>
+
+      <p style="margin-top:0.8rem;">
+        <button id="submit-btn" class="btn btn-primary" type="button">Submit Quiz</button>
+        <button id="reset-btn" class="btn btn-outline" type="button">Reset Quiz</button>
+      </p>
+    </form>
+
+    <section id="results" aria-live="polite" style="margin-top:1rem;"></section>
+  </main>
+
+  <footer>
+    <p class="small">Quiz &copy; 2025 — For IT 3203 milestone #2. This quiz is educational and part of the course project.</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
