@@ -1,5 +1,5 @@
 /* quiz.js
-   Milestone #2 quiz grading logic
+   LegacyTrades Skill Check grading logic
 */
 const ANSWERS = {
   q1: "momentum",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overall.innerHTML += `<div style="margin-top:0.4rem;">Score: <strong>${score} / ${total}</strong> (${percent}%)</div>`;
     const scoreSpan = document.createElement("div");
     scoreSpan.style.marginTop = "0.4rem";
-    scoreSpan.textContent = passed ? "Congratulations — you passed." : "You did not pass. Review the materials and try again.";
+    scoreSpan.textContent = passed ? "You think like a disciplined trader!" : "You still trade emotionally- study harder.";
     overall.appendChild(scoreSpan);
     resultsEl.appendChild(overall);
     overall.scrollIntoView({ behavior: "smooth", block: "center" });
