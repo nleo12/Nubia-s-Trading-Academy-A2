@@ -1,0 +1,82 @@
+
+/* =========================================================
+   style.css — Nubia Leo Trading Academy (NLTA)
+   Theme: Deep Royal Purple + Gold
+   - One stylesheet for everything
+   - Flex (nav), Grid (cards), table, images, forms
+   - Element, class, and ID selectors + :hover
+   - Floating "Book Now" button on all pages
+========================================================= */
+
+/* ----- Theme Colors (CSS variables) ----- */
+:root{
+  --bg: #2E0854;         /* deep royal purple */
+  --panel: #3a0c6e;      /* slightly lighter purple panel */
+  --panel-2: #4b148f;    /* hover/alt panel */
+  --line: #5e2aa8;       /* soft divider line */
+  --text: #f2f2f7;       /* near-white text */
+  --muted:#c9c7d9;       /* soft gray text */
+  --gold:#FFD700;        /* accent */
+  --gold-2:#f9e27d;      /* lighter gold for gradients */
+  --ink:#0a0a0a;         /* dark ink for contrast on gold */
+}
+
+/* ----- Base (element selectors) ----- */
+html, body{ margin:0; padding:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); }
+h1,h2,h3{ margin:.5rem 0; line-height:1.2; }
+p{ margin:.5rem 0 1rem; }
+a{ color: var(--gold); text-decoration: none; }
+a:hover{ text-decoration: underline; } /* pseudo-class */
+img{ max-width:100%; height:auto; display:block; }
+
+/* ----- Layout Helpers (class selectors) ----- */
+.container{ max-width: 1100px; margin: 0 auto; padding: 1rem; }
+.grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card{ background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 1rem; }
+.small{ color: var(--muted); font-size:.95rem; }
+.center{ text-align:center; }
+
+/* ----- Navigation (Flex) ----- */
+.nav{ position: sticky; top:0; z-index:50; background: rgba(28,5,55,.8); border-bottom:1px solid var(--line); backdrop-filter: blur(4px); }
+.nav .inner{ display:flex; flex-wrap:wrap; align-items:center; gap:.6rem; padding:.6rem .8rem; }
+.nav .brand{ display:flex; align-items:center; gap:.6rem; font-weight:800; color:var(--text); }
+.nav a{ color:var(--text); padding:.45rem .7rem; border-radius:10px; border:1px solid rgba(255,255,255,.1); }
+.nav a:hover{ background: rgba(255,255,255,.08); } /* pseudo-class */
+
+/* ----- Hero with centered NL logo ----- */
+.hero{ padding: 4rem 1rem 2rem; position:relative; }
+.hero::before{ content:""; position:absolute; inset:0; background: radial-gradient(1200px 600px at 10% -10%, rgba(255,255,255,.06), transparent); pointer-events:none; }
+.logo-hero{ width:120px; height:120px; border-radius:999px; display:grid; place-items:center; margin: 0 auto 12px; 
+  background: radial-gradient( circle at 30% 30%, var(--gold), var(--gold-2) ); color: var(--ink); font-weight:900; font-size: 42px; 
+  border: 2px solid rgba(0,0,0,.2); box-shadow: 0 8px 22px rgba(0,0,0,.35); transition: transform .15s ease, box-shadow .15s ease; }
+.logo-hero:hover{ transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 26px rgba(0,0,0,.45); } /* pseudo-class */
+.hero h1{ text-align:center; font-size: clamp(1.8rem, 4.5vw, 3rem); }
+.hero .cta{ display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; margin-top:.75rem; }
+
+/* ----- Buttons ----- */
+.btn{ display:inline-block; padding:.65rem 1rem; border-radius:999px; border:1px solid rgba(255,255,255,.15); text-decoration:none; }
+.btn.primary{ background: var(--gold); color: var(--ink); border-color: transparent; }
+.btn.ghost{ background: rgba(255,255,255,.08); color: var(--text); }
+.btn:hover{ filter: brightness(1.05); } /* pseudo-class */
+
+/* ----- Tables (classes schedule) ----- */
+table{ width:100%; border-collapse: collapse; background: var(--panel); }
+th, td{ border:1px solid var(--line); padding:10px; text-align:left; }
+th{ background: #431074; }
+
+/* ----- Forms ----- */
+label{ display:block; margin:.5rem 0 .25rem; }
+input, select, textarea{ width:100%; padding:.6rem .7rem; border:1px solid var(--line); border-radius:10px; background:#2a074e; color:var(--text); }
+button[type="submit"], input[type="submit"]{ cursor:pointer; }
+
+/* ----- ID selector example ----- */
+#notice{ background: rgba(255,215,0,.12); border: 1px solid var(--gold); padding:.75rem; border-radius: 12px; }
+
+/* ----- Floating Book Now (ALL pages) ----- */
+.fab-book{ position: fixed; right: 20px; bottom: 20px; z-index: 80;
+  background: var(--gold); color: var(--ink); border-radius: 999px; padding: .7rem 1rem; 
+  box-shadow: 0 6px 14px rgba(0,0,0,.35); font-weight: 800; border: 2px solid rgba(0,0,0,.15); }
+.fab-book:hover{ transform: translateY(-1px); } /* pseudo-class */
+
+/* ----- Footer ----- */
+footer{ padding:1rem; color: var(--muted); font-size:.92rem; text-align:center; }
