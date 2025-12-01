@@ -1,6 +1,6 @@
 
 /* =========================================================
-   style.css — Nubia Leo Trading Academy (NLTA)
+   style.css — Leo Legacy Trading (LLT)
    Theme: Deep Royal Purple + Gold
    - One stylesheet for everything
    - Flex (nav), Grid (cards), table, images, forms
@@ -80,3 +80,4 @@ button[type="submit"], input[type="submit"]{ cursor:pointer; }
 
 /* ----- Footer ----- */
 footer{ padding:1rem; color: var(--muted); font-size:.92rem; text-align:center; }
+
